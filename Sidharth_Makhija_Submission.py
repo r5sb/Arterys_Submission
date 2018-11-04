@@ -4,7 +4,7 @@
 # - Sidharth Makhija                                          #
 ###############################################################
  
- #Usage: python3 submission_script.py --resume 'Sidharth_Makhija_Resume.pdf' --cover 'Sidharth_Makhija_Cover_Arterys.pdf' --code 'submission_script.py'
+ #Usage: python3 submission_script.py --resume 'Resume.pdf' --cover 'Cover.pdf' --code 'submission_script.py'
  
 import urllib.request  
 import json
@@ -30,18 +30,18 @@ def get_base64(file_name):
 	base = temp2.decode()
 	return base
 
-resume_md5 = get_md5(args.resume)#('Sidharth_Makhija_Resume.pdf')
-cover_md5 = get_md5(args.cover)#('Sidharth_Makhija_Cover_Arterys.pdf')
-code_md5 = get_md5(args.code)#('submission_script.py')
+resume_md5 = get_md5(args.resume)
+cover_md5 = get_md5(args.cover)
+code_md5 = get_md5(args.code)
 
-resume_base64 = get_base64(args.resume)#('Sidharth_Makhija_Resume.pdf')
-cover_base64 = get_base64(args.cover)#('Sidharth_Makhija_Cover_Arterys.pdf')
-code_base64 = get_base64(args.code)#('submission_script.py')
+resume_base64 = get_base64(args.resume)
+cover_base64 = get_base64(args.cover)
+code_base64 = get_base64(args.code)
 
 json_body = {
     "email": "ssm9575@rit.edu",
     "name": "Sidharth Makhija",
-    "position": "Machine Learning Intern California",
+    "position": "Machine Learning Intern",
     "notes": "github.com/r5sb",
     "phone": "(585) 755-4004",
     "documents": {
@@ -62,7 +62,7 @@ json_body = {
     "test_or_submit": "submit"
 }
 
-submission_url = "https://resumeapi.arterys.com/api/submission/feb853da-a3f0-4466-8421-3f075863a413"
+submission_url = "secret-link"
 http_req = urllib.request.Request(submission_url)
 http_req.add_header('Content-Type', 'application/json; charset=utf-8')
 json_data = json.dumps(json_body)
