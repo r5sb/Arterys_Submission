@@ -39,11 +39,11 @@ cover_base64 = get_base64(args.cover)
 code_base64 = get_base64(args.code)
 
 json_body = {
-    "email": "ssm9575@rit.edu",
+    "email": "ssmXXXX@rit.edu",
     "name": "Sidharth Makhija",
     "position": "Machine Learning Intern",
     "notes": "github.com/r5sb",
-    "phone": "(585) 755-4004",
+    "phone": "(585) 755-XXXX",
     "documents": {
         "resume": {
         "content": resume_base64,
